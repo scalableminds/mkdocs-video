@@ -5,6 +5,7 @@ from mkdocs.exceptions import ConfigurationError
 
 
 class Plugin(mkdocs.plugins.BasePlugin):
+    supports_multiple_instances = True
     config_scheme = (
         ("mark", config_options.Type(str, default="type:video")),
         ("is_video", config_options.Type(bool, default=False)),
